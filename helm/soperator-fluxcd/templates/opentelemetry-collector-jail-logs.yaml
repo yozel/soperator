@@ -8,6 +8,8 @@ metadata:
   labels:
   {{- include "soperator-fluxcd.labels" . | nindent 4 }}
 spec:
+  driftDetection:
+    mode: warn
   chart:
     spec:
       chart: opentelemetry-collector
